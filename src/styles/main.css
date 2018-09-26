@@ -51,6 +51,13 @@ p {
   background: #0075bf url(/images/menu-icon.png) center;
 }
 
+article.faq li p:first-child {
+  margin: 0;
+  font-weight: bold;
+  padding-top: 0.7em;
+}
+
+
 /*
  * This responsive menu layout was originally taken from the example at
  * https://blog.teamtreehouse.com/create-an-absolute-basic-mobile-css-responsive-navigation-menu
