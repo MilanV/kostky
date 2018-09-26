@@ -1,0 +1,5 @@
+  <ul class="menutop">
+  {{#each menupages }}
+    <li {{#iff title  '==' ../title }} class="current" {{/iff}}><a href="/{{ path }}">{{ title }}</a></li>
+  {{/each}}
+  </ul>
