@@ -1,9 +1,8 @@
     <div class="{{fallback params.style "vystavy_zakl"}}">
     {{#if params.heading}}<p>{{ params.heading }}</p>{{/if}}
-    <ul>
       {{#each vystavy }}
         {{#if (date_filter ../params.daterange datum_do)}}
-	  <li><a href="/{{ path }}">
+	  <div><a href="/{{ path }}">
 	    {{#if upoutavka_obrazek}}
 	      <img src="{{ upoutavka_obrazek }}" height="120px"/>
 	    {{/if}}
@@ -15,8 +14,8 @@
 	    {{#if upoutavka }}
 	      <p>{{ upoutavka }}</p>
 	    {{/if}}
-	  </a><br clear="all"/></li>
+	  </a><br clear="all"/></div>
 	{{/if}}
       {{/each}}
-    </ul>
+      <br clear="all">
     </div>

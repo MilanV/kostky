@@ -15,51 +15,105 @@ div.vystavy_zakl {
   float: right;
 }
 
-div.vystavy_zakl ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-div.vystavy_zakl ul a {
+div.vystavy_zakl a {
   display: block;
   color: black;
   text-decoration: inherit;
 }
 
-div.vystavy_zakl ul li {
+div.vystavy_zakl div {
   background: white;
   padding: 0.3em;
 }
 
-div.vystavy_zakl ul li:not(:last-child)  {
+div.vystavy_zakl div:not(:last-child)  {
   border-bottom: solid gray 2px;
 }
 
-div.vystavy_zakl li h1 {
+div.vystavy_zakl div h1 {
   font-weight: bold;
   font-size: 12pt;
   margin: 0;
 }
 
-div.vystavy_zakl li h2 {
+div.vystavy_zakl div h2 {
   font-weight: bold;
   font-size: 10pt;
   margin: 0;
 }
 
-div.vystavy_zakl li p {
+div.vystavy_zakl div p {
   font-weight: normal;
   font-size: 9pt;
 }
 
-div.vystavy_zakl li img {
+div.vystavy_zakl div img {
   border: 0;
   float: right;
   max-width: 100%;
 }
 
-div.vystavy_zakl li br {
-  border-top: solid #aaa 3px;
+/*
+ * Styl pro upoutávku na hlavní straně
+ */
+
+
+div.vystavy_upoutavka {
+  background-color: #54a3d5;
+  background-image: linear-gradient(white, #0075bf);
+  color: black;
+  padding-left: 2em;
+  padding-right: 2em;
+  padding-top: 0;
+  padding-bottom: 0.5em;
+  margin: 0;
+  font-size: 14pt;
+  font-weight: bold;
+  width: 100%;
+}
+
+div.vystavy_upoutavka p {
+  padding: 0;
+  margin: 0;
+}
+
+div.vystavy_upoutavka div {
+  display: block;
+  width: 20%;
+  min-width: 20em;
+  background: white;
+  padding: 0.3em;
+  margin-right: 1em;
+  margin-bottom: 0.2em;
+  float: left;
+}
+
+div.vystavy_upoutavka a {
+  display: block;
+  color: black;
+  text-decoration: inherit;
+}
+
+div.vystavy_upoutavka div h1 {
+  font-weight: bold;
+  font-size: 12pt;
+  margin: 0;
+}
+
+div.vystavy_upoutavka div h2 {
+  font-weight: bold;
+  font-size: 10pt;
+  margin: 0;
+}
+
+div.vystavy_upoutavka div p {
+  font-weight: normal;
+  font-size: 9pt;
+}
+
+div.vystavy_upoutavka div img {
+  border: 0;
+  float: right;
+  max-width: 100%;
 }
 

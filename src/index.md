@@ -1,4 +1,10 @@
 ---
+layout_plugins:
+- layout: "vystavy"
+  style: "vystavy_upoutavka"
+  heading: "Nejbližší výstavy"
+  daterange: "next year"
+
 layout: index.html
 permalink: false
 ---
