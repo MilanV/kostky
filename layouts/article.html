@@ -1,4 +1,7 @@
 {{> header }}
+{{#each layout_plugins}}
+  {{> (lookup . 'layout') .. params=this }}
+{{/each}}
     <article>
       <h1>{{ title }}</h1>
       <div class="meta">

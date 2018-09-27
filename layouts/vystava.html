@@ -1,0 +1,22 @@
+{{> header }}
+    <article>
+      <h1>{{ nazev }}</h1>
+      <h2>{{ mesto }}
+	{{#if datum_od}}{{#if datum_do}}
+	  {{moment datum_od format="DD. MM. YYYY"}} &mdash; {{moment datum_do format="DD. MM. YYYY"}}
+	{{/if}}{{/if}}
+      </h2>
+      <div class="vystava_meta">
+      {{#if plakatek }}
+        <a class="plakatek" href="{{ plakatek }}">Plakát výstavy</a>
+      {{/if}}
+      {{#if fotogalerie }}
+        <a class="fotogalerie" href="{{ fotogalerie }}">Fotogalerie</a>
+      {{/if}}
+      {{#if pro_media }}
+	<a class="pro_media" href="{{ pro_media }}">Tiskové materiály</a>
+      {{/if}}
+      </div>
+      {{{ contents }}}
+    </article>
+{{> footer }}

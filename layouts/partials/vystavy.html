@@ -1,0 +1,22 @@
+    <div class="{{fallback params.style "vystavy_zakl"}}">
+    {{#if params.heading}}<p>{{ params.heading }}</p>{{/if}}
+    <ul>
+      {{#each vystavy }}
+        {{#if (date_filter ../params.daterange datum_do)}}
+	  <li><a href="/{{ path }}">
+	    {{#if upoutavka_obrazek}}
+	      <img src="{{ upoutavka_obrazek }}" height="120px"/>
+	    {{/if}}
+	    <h1>{{ nazev }} &mdash; {{ mesto }}</h1>
+	    <h2>{{moment date=datum_od format="D. M. YYYY"}}
+	      &ndash;
+	      {{moment date=datum_do format="D. M. YYYY"}}
+	    </h2>
+	    {{#if upoutavka }}
+	      <p>{{ upoutavka }}</p>
+	    {{/if}}
+	  </a><br clear="all"/></li>
+	{{/if}}
+      {{/each}}
+    </ul>
+    </div>

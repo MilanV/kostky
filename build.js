@@ -6,6 +6,7 @@ var collections = require('metalsmith-collections');
 var permalinks = require('metalsmith-permalinks');
 var MomentHandler = require("handlebars.moment");
 MomentHandler.registerHelpers(handlebars);
+var moment = require('moment');
 
 handlebars.registerHelper("debug", function(optionalValue) {
   console.log("Current Context");
@@ -18,6 +19,8 @@ handlebars.registerHelper("debug", function(optionalValue) {
     console.log(optionalValue);
   }
 });
+
+handlebars.registerHelper('fallback', function (a, b) {return a ? a : b;});
 
 handlebars.registerHelper('iff', function(a, operator, b, opts) {
     var bool = false;
@@ -42,6 +45,28 @@ handlebars.registerHelper('iff', function(a, operator, b, opts) {
     }
 });
 
+handlebars.registerHelper('date_filter', function(daterange, date) {
+	var d_since = moment();
+	var d_til = moment();
+	switch(daterange) {
+		case 'next year':
+			d_til.add(1, 'y');
+			break;
+		case 'next week':
+			d_til.add(1, 'w');
+			break;
+		case 'next month':
+			d_til.add(1, 'm');
+			break;
+		case 'last year':
+			d_since.subtract(1, 'y');
+			break;
+		default:
+			throw "Unknown daterange " + daterange;
+	}
+	return moment(date).isBetween(d_since, d_til);
+});
+
 
 metalsmith(__dirname)
   .metadata({
@@ -63,6 +88,11 @@ metalsmith(__dirname)
      sortBy: 'menuposition',
      reverse: false
      },
+   vystavy: {
+     pattern: 'vystavy/**/*.md',
+     sortBy: 'datum_do',
+     reverse: true
+     },
    }))
   .use(markdown())
   .use(permalinks({
@@ -78,6 +108,7 @@ metalsmith(__dirname)
       header: 'partials/header',
       footer: 'partials/footer',
       menupages: 'partials/menupages',
+      vystavy: 'partials/vystavy',
     }
   }))
   .build(function (err) {

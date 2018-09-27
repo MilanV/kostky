@@ -1,0 +1,109 @@
+
+/*
+ * This responsive menu layout was originally taken from the example at
+ * https://blog.teamtreehouse.com/create-an-absolute-basic-mobile-css-responsive-navigation-menu
+ */
+
+/*MAIN*/
+
+#logo{
+  margin: 20px;
+  float: left;
+  width: 200px;
+  height: 44px;
+  background: url(/images/kostkylogo_trans.png) no-repeat center;
+  display: block;
+}
+
+#menu-icon {
+  display: none;
+  width: 40px;
+  height: 44px;
+  background: #0075bf url(/images/menu-icon.png) center;
+}
+
+header {
+  margin:0; padding:0; border:0; outline:0; font-size:100%; vertical-align:baseline; background:transparent;
+  background: #fff;
+  width: 100%;
+  height: 76px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  border-bottom: 4px solid #0075bf;
+  z-index: 100;
+}
+
+nav a {
+  color: #0075bf;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: #444;
+}
+
+nav {
+  float: right;
+  padding: 20px;
+}
+
+nav a:hover#menu-icon {
+  background-color: #444;
+  border-radius: 4px 4px 0 0;
+}
+
+nav ul.menutop {
+  list-style: none; margin:0; padding:0; border:0; outline:0; font-size:100%; vertical-align:baseline; background:transparent;
+}
+
+nav ul.menutop li {
+  margin:0; padding:0; border:0; outline:0; font-size:100%; vertical-align:baseline; background:transparent;
+  display: inline-block;
+  float: left;
+  padding: 10px;
+}
+
+nav ul.menutop li.current a {
+  color: #6db7ff;
+  border-top: 0.7em solid #0075bf;
+  border-bottom: 0.7em solid #0075bf;
+  padding-top: 0.7em;
+  padding-bottom: 0.7em;
+}
+
+/*MEDIA QUERY*/
+@media only screen and (max-width : 766px) {
+
+  header {
+    position: absolute;
+  }
+
+  #menu-icon {
+    display:inline-block;
+  }
+
+  nav ul, nav:active ul {
+    display: none;
+    position: absolute;
+    padding: 20px;
+    background: #fff;
+    border: 5px solid #0075bf;
+    right: 20px;
+    top: 60px;
+    width: 50%;
+    border-radius: 4px 0 4px 4px;
+  }
+
+  nav li {
+    text-align: center;
+    width: 100%;
+    padding: 10px 0;
+    margin: 0;
+  }
+
+  nav:hover ul {
+    display: block;
+  }
+}
