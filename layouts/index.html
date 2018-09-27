@@ -1,16 +1,9 @@
 {{> header }}
+{{#each layout_plugins}}
+  {{> (lookup . 'layout') .. params=this }}
+{{/each}}
     <h1>{{ site.name }}</h1>
 
-    <ul class="recent">
-    {{#each articles }}
-      <li>
-        <div class="title"><a href="{{ path }}">{{ title }}</a></div>
-        <div class="date">{{ date }}</div>
-        <div class="date">{{moment date=date format="DD. MM. YYYY"}}</div>
-	<div>{{moment moment diff=date}}</div>
-	<div>{{#iff 0 "<" (moment moment diff=date)}}minulost{{else}}budoucnost{{/iff}}</div>
-      </li>
-    {{/each}}
-    </ul>
+    {{{ contents }}}
 
 {{> footer }}

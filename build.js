@@ -79,11 +79,6 @@ metalsmith(__dirname)
   .source('./src')
   .destination('./public')
    .use(collections({
-   articles: {
-     pattern: 'articles/**/*.md',
-     sortBy: 'date',
-     reverse: true
-     },
    menupages: {
      sortBy: 'menuposition',
      reverse: false
@@ -102,7 +97,7 @@ metalsmith(__dirname)
   .use(layouts({
     engine: 'handlebars',
     directory: './layouts',
-    default: 'article.html',
+    default: 'page.html',
     pattern: ["*/*/*html","*/*html","*html"],
     partials: {
       header: 'partials/header',
