@@ -1,6 +1,6 @@
 ---
 layout: "vystava.html"
-nazev: "Kostkování"
+title: "Kostkování"
 mesto: "Pardubice"
 datum_od:	2018-10-06
 datum_do:	2018-10-07

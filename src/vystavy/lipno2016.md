@@ -1,6 +1,6 @@
 ---
 layout: "vystava.html"
-nazev: "Kostkománie 2016"
+title: "Kostkománie 2016"
 mesto: "Lipno nad Vltavou"
 datum_od:	2016-06-04
 datum_do:	2016-08-31

@@ -1,0 +1,61 @@
+backend:
+  name: git-gateway
+  branch: master # Branch to update (optional; defaults to master)
+
+media_folder: "images/uploads" # Media files will be stored in the repo under images/uploads
+
+collections:
+  - name: "vystavy"
+    label: "Výstavy"
+    label_singular: "výstava"
+    folder: "vystavy"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}_{{slug}}"
+    fields:
+      - name: "layout"
+        label: "layout"
+        widget: "hidden"
+        default: "vystava.html"
+      - name: "title"
+        label: "Název výstavy"
+        widget: "string"
+      - name: "mesto"
+        label: "Město"
+        widget: "string"
+      - name: "datum_od"
+        label: "datum od"
+        widget: "date"
+      - name: "datum_do"
+        label: "datum do"
+        widget: "date"
+      - name: "upoutavka"
+        label: "Upoutávka"
+        widget: "string"
+      - name: "upoutavka_obrazek"
+        label: "Upoutávka - obrázek (url)"
+        widget: "string"
+        required: false
+      - name: "oteviraci_doba"
+        label: "otevírací doba"
+        widget: "hidden"
+        default: ""
+      - name: "plakatek"
+        label: "plakátek (url)"
+        widget: "string"
+        required: false
+      - name: "fotogalerie"
+        label: "fotogalerie"
+        widget: "hidden"
+        default: ""
+      - name: "ohlasy"
+        label: "ohlasy"
+        widget: "hidden"
+        default: ""
+      - name: "pro_media"
+        label: "pro media"
+        widget: "hidden"
+        default: ""
+      - name: "body"
+        label: "Hlavní text o výstavě"
+        widget: "markdown"
+  

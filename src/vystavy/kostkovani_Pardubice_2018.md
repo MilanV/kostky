@@ -1,6 +1,6 @@
 ---
 layout: "vystava.html"
-nazev: "Kostkování"
+title: "Kostkování"
 mesto: "Kroměříž"
 datum_od:	2018-05-12
 datum_do:	2018-05-13
