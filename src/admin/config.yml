@@ -60,4 +60,138 @@ collections:
       - name: "body"
         label: "Hlavní text o výstavě"
         widget: "markdown"
-  
+  - name: "pages"
+    label: "stránky"
+    files:
+      - file: "src/about.md"
+        name: "o_nas"
+        label: "O nás"
+        delete: false
+        fields:
+          - label: "Skupiny"
+            name: "collection"
+            widget: "list"
+            field:
+              - label: "skupina"
+                name: "skupina"
+                widget: "select"
+                options:
+                  - label: "Stránka do hlavního menu"
+                    value: "menupages"
+          - label: "Pozice v menu"
+            name: "menuposition"
+            widget: "number"
+            required: false
+            valueType: "int"
+            min: 0
+            default: 999
+      - file: "src/faq.md"
+        name: "faq"
+        label: "Časté otázky"
+        delete: false
+        fields:
+          - label: "Skupiny"
+            name: "collection"
+            widget: "list"
+            field:
+              - label: "skupina"
+                name: "skupina"
+                widget: "select"
+                options:
+                  - label: "Stránka do hlavního menu"
+                    value: "menupages"
+          - label: "Pozice v menu"
+            name: "menuposition"
+            widget: "number"
+            required: false
+            valueType: "int"
+            min: 0
+            default: 999
+      - file: "src/historie.md"
+        name: "historie"
+        label: "Historie kostky.org"
+        delete: false
+        fields:
+          - label: "Skupiny"
+            name: "collection"
+            widget: "list"
+            field:
+              - label: "skupina"
+                name: "skupina"
+                widget: "select"
+                options:
+                  - label: "Stránka do hlavního menu"
+                    value: "menupages"
+          - label: "Pozice v menu"
+            name: "menuposition"
+            widget: "number"
+            required: false
+            valueType: "int"
+            min: 0
+            default: 999
+      - file: "src/MOC.md"
+        name: "MOC"
+        label: "Naše modely"
+        delete: false
+        fields:
+          - label: "Skupiny"
+            name: "collection"
+            widget: "list"
+            field:
+              - label: "skupina"
+                name: "skupina"
+                widget: "select"
+                options:
+                  - label: "Stránka do hlavního menu"
+                    value: "menupages"
+          - label: "Pozice v menu"
+            name: "menuposition"
+            widget: "number"
+            required: false
+            valueType: "int"
+            min: 0
+            default: 999
+      - file: "src/vystavy.md"
+        name: "vystavy"
+        label: "Naše výstavy"
+        delete: false
+        fields:
+          - label: "Skupiny"
+            name: "collection"
+            widget: "list"
+            field:
+              - label: "skupina"
+                name: "skupina"
+                widget: "select"
+                options:
+                  - label: "Stránka do hlavního menu"
+                    value: "menupages"
+          - label: "Pozice v menu"
+            name: "menuposition"
+            widget: "number"
+            required: false
+            valueType: "int"
+            min: 0
+            default: 999
+      - file: "src/index.md"
+        name: "home"
+        label: "Domovská stránka"
+        delete: false
+        fields:
+          - label: "Skupiny"
+            name: "collection"
+            widget: "list"
+            field:
+              - label: "skupina"
+                name: "skupina"
+                widget: "select"
+                options:
+                  - label: "Stránka do hlavního menu"
+                    value: "menupages"
+          - label: "Pozice v menu"
+            name: "menuposition"
+            widget: "number"
+            required: false
+            valueType: "int"
+            min: 0
+            default: 999
