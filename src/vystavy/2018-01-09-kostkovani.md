@@ -1,6 +1,6 @@
 ---
 layout: vystava.html
-title: Kostkování Pardubice
+title: pardubické Kostkování
 mesto: Pardubice
 datum_od: 2018-10-06T00:00:00.000Z
 datum_do: 2018-10-07T00:00:00.000Z
