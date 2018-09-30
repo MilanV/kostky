@@ -70,14 +70,7 @@ collections:
         fields:
           - label: "Skupiny"
             name: "collection"
-            widget: "list"
-            field:
-              - label: "skupina"
-                name: "skupina"
-                widget: "select"
-                options:
-                  - label: "Stránka do hlavního menu"
-                    value: "menupages"
+            widget: "string"
           - label: "Pozice v menu"
             name: "menuposition"
             widget: "number"
@@ -85,6 +78,9 @@ collections:
             valueType: "int"
             min: 0
             default: 999
+          - name: "body"
+            label: "Hlavní text stránky"
+            widget: "markdown"
       - file: "src/faq.md"
         name: "faq"
         label: "Časté otázky"
@@ -92,14 +88,7 @@ collections:
         fields:
           - label: "Skupiny"
             name: "collection"
-            widget: "list"
-            field:
-              - label: "skupina"
-                name: "skupina"
-                widget: "select"
-                options:
-                  - label: "Stránka do hlavního menu"
-                    value: "menupages"
+            widget: "string"
           - label: "Pozice v menu"
             name: "menuposition"
             widget: "number"
@@ -107,6 +96,9 @@ collections:
             valueType: "int"
             min: 0
             default: 999
+          - name: "body"
+            label: "Hlavní text stránky"
+            widget: "markdown"
       - file: "src/historie.md"
         name: "historie"
         label: "Historie kostky.org"
@@ -114,14 +106,7 @@ collections:
         fields:
           - label: "Skupiny"
             name: "collection"
-            widget: "list"
-            field:
-              - label: "skupina"
-                name: "skupina"
-                widget: "select"
-                options:
-                  - label: "Stránka do hlavního menu"
-                    value: "menupages"
+            widget: "string"
           - label: "Pozice v menu"
             name: "menuposition"
             widget: "number"
@@ -129,6 +114,9 @@ collections:
             valueType: "int"
             min: 0
             default: 999
+          - name: "body"
+            label: "Hlavní text stránky"
+            widget: "markdown"
       - file: "src/MOC.md"
         name: "MOC"
         label: "Naše modely"
@@ -136,14 +124,7 @@ collections:
         fields:
           - label: "Skupiny"
             name: "collection"
-            widget: "list"
-            field:
-              - label: "skupina"
-                name: "skupina"
-                widget: "select"
-                options:
-                  - label: "Stránka do hlavního menu"
-                    value: "menupages"
+            widget: "string"
           - label: "Pozice v menu"
             name: "menuposition"
             widget: "number"
@@ -151,6 +132,9 @@ collections:
             valueType: "int"
             min: 0
             default: 999
+          - name: "body"
+            label: "Hlavní text stránky"
+            widget: "markdown"
       - file: "src/vystavy.md"
         name: "vystavy"
         label: "Naše výstavy"
@@ -158,14 +142,7 @@ collections:
         fields:
           - label: "Skupiny"
             name: "collection"
-            widget: "list"
-            field:
-              - label: "skupina"
-                name: "skupina"
-                widget: "select"
-                options:
-                  - label: "Stránka do hlavního menu"
-                    value: "menupages"
+            widget: "string"
           - label: "Pozice v menu"
             name: "menuposition"
             widget: "number"
@@ -173,6 +150,9 @@ collections:
             valueType: "int"
             min: 0
             default: 999
+          - name: "body"
+            label: "Hlavní text stránky"
+            widget: "markdown"
       - file: "src/index.md"
         name: "home"
         label: "Domovská stránka"
@@ -180,14 +160,7 @@ collections:
         fields:
           - label: "Skupiny"
             name: "collection"
-            widget: "list"
-            field:
-              - label: "skupina"
-                name: "skupina"
-                widget: "select"
-                options:
-                  - label: "Stránka do hlavního menu"
-                    value: "menupages"
+            widget: "string"
           - label: "Pozice v menu"
             name: "menuposition"
             widget: "number"
@@ -195,3 +168,6 @@ collections:
             valueType: "int"
             min: 0
             default: 999
+          - name: "body"
+            label: "Hlavní text stránky"
+            widget: "markdown"
