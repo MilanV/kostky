@@ -10,7 +10,7 @@ collections:
   - name: "vystavy"
     label: "Výstavy"
     label_singular: "výstava"
-    folder: "vystavy"
+    folder: "src/vystavy"
     create: true
     slug: "{{year}}-{{month}}-{{day}}_{{slug}}"
     fields:
